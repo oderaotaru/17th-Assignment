@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    background-color: rgb(252, 248, 248);
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    width: 80%;
+    height: 100%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 'feedback  suggestion suggestion suggestion';
+}
+.left {
+    grid-area: feedback;
+    padding: 0 12px;
+}
+.right {
+    grid-area: suggestion;
+    padding: 0 12px;
+}
+.board, .tags, .map {
+    width: 100%;
+    height: 20%;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: white;
+}
+.board {
+    background-image: url(images/istockphoto-1138288769-612x612.jpg);
+    display: flex;
+    align-items: flex-end;
+    
+}
+.board div {
+    line-height: 14px;
+    margin-left: 15px;
+}
+.board h3 {
+    color: white;
+}
+.board p {
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+}
+.mid {
+    width: 80%;
+    height: 80%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.mid div {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+.mid p {
+    height: 5px;
+    padding: 12px;
+    font-size: 10px;
+    background-color: rgb(201, 205, 243);
+    align-self: center;
+    border-radius: 6px;
+    color: blue;
+}
+.mid p:hover {
+    color: white;
+    background-color: rgb(6, 122, 230);
+}
+.head {
+    width: 80%;
+    height: 80%;
+}
+.head div {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 10px;
+}
+ul li, .head div p {
+    font-size: 14px;
+}
+ul li {
+    list-style: none;
+}
+.color1 li::before {
+    content: "\2022";
+    color: rgb(216, 148, 21);
+    font-weight: 900;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.color2 li::before {
+    content: "\2022";
+    color: rgb(216, 21, 167);
+    font-weight: 900;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.color3 li::before {
+    content: "\2022";
+    color: rgb(60, 180, 216);
+    font-weight: 900;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.top {
+    width: 100%;
+    height: 9%;
+    margin-top: 10px;
+    background-color: rgb(41, 41, 68);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+}
+.suggest {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.suggest div {
+    padding-left: 20px;
+}
+.suggest h3 {
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.opt {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.opt label {
+    color: white;
+    font-size: 13px;
+}
+.opt select {
+    color: white;
+    outline: none;
+    border: none;
+    background-color: rgb(41, 41, 68);
+    padding: 0 2px;
+    font-weight: 600;
+}
+.feed {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.feed h4 {
+    color: white;
+    font-weight: 450;
+    font-size: 13px;
+    background-color: rgb(148, 79, 212);
+    height: 60%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.one, .two, .three, .four, .five, .six {
+    width: 100%;
+    height: 15%;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.first {
+    width: 4%;
+    height: 40%;
+    background-color: rgb(202, 216, 241);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 6px 0;
+}
+.middle {
+    width: 60%;
+    height: 80%;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.middle p {
+    margin-top: -12px;
+}
+#down  {
+    width: 20%;
+    height: fit-content;
+    background-color: rgb(202, 216, 241);
+    border-radius: 4px;
+    font-size: 12px;
+    color: rgb(73, 73, 221);
+    display: flex;
+    justify-content: center;
+}
+.last {
+    width: 36%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.last i{
+    padding: 0 5px;
+}
+.last h3 {
+    padding: 0 25px 0 5px;
+}
+
