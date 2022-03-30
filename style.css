@@ -20,21 +20,24 @@ main {
     padding: 0 12px;
 }
 .board, .tags, .map {
-    width: 100%;
+    width: 80%;
     height: 20%;
     margin: 10px 0;
     border-radius: 10px;
     background-color: white;
+    padding: 10px;
 }
 .board {
     background-image: url(images/istockphoto-1138288769-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    align-items: flex-end;
-    
+    flex-direction: column;
+    justify-content: flex-end; 
 }
 .board div {
-    line-height: 14px;
-    margin-left: 15px;
+    height: 52%;
+    padding: 18px;
 }
 .board h3 {
     color: white;
@@ -44,30 +47,28 @@ main {
     font-size: 14px;
     font-weight: 200;
 }
-.mid {
-    width: 80%;
-    height: 80%;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.mid div {
+.tags {
     display: flex;
     flex-direction: row;
-    padding: 8px;
+    flex-wrap: wrap;
 }
-.mid p {
-    height: 5px;
-    padding: 12px;
+.tags div {
+    padding: 0 14px;
+}
+.tags p {
+    height: fit-content;
+    width: fit-content;
+    padding: 4px 6px;
     font-size: 10px;
     background-color: rgb(201, 205, 243);
     align-self: center;
     border-radius: 6px;
     color: blue;
 }
-.mid p:hover {
+.tags p:hover {
     color: white;
     background-color: rgb(6, 122, 230);
+    cursor: pointer;
 }
 .head {
     width: 80%;
@@ -122,15 +123,15 @@ ul li {
     flex-direction: row;
 }
 .suggest {
-    width: 25%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    padding: 0 10px;
 }
 .suggest div {
-    padding-left: 20px;
+    padding: 0 8px;
 }
 .suggest h3 {
     font-family: 'Poppins';
@@ -157,6 +158,9 @@ ul li {
     padding: 0 2px;
     font-weight: 600;
 }
+.opt select:hover {
+    cursor: pointer;
+}
 .feed {
     width: 30%;
     height: 100%;
@@ -169,12 +173,17 @@ ul li {
     font-weight: 450;
     font-size: 13px;
     background-color: rgb(148, 79, 212);
-    height: 60%;
-    width: 70%;
+    height: fit-content;
+    width: fit-content;
+    padding: 7px 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+}
+.feed h4:hover {
+    cursor: pointer;
+    background-color: rgb(164, 102, 223);
 }
 .one, .two, .three, .four, .five, .six {
     width: 100%;
@@ -186,16 +195,15 @@ ul li {
     flex-direction: row;
 }
 .first {
-    width: 4%;
-    height: 40%;
-    background-color: rgb(202, 216, 241);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(234, 240, 250);
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     margin: 20px;
-    padding: 6px 0;
+    padding: 4px 8px 0;
 }
 .middle {
     width: 60%;
@@ -207,9 +215,10 @@ ul li {
     margin-top: -12px;
 }
 #down  {
-    width: 20%;
+    width: fit-content;
     height: fit-content;
-    background-color: rgb(202, 216, 241);
+    padding: 4px 6px;
+    background-color: rgb(234, 240, 250);
     border-radius: 4px;
     font-size: 12px;
     color: rgb(73, 73, 221);
@@ -229,5 +238,76 @@ ul li {
 }
 .last h3 {
     padding: 0 25px 0 5px;
+}
+
+@media screen and (max-width: 1385px) {
+    .head {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1345px) {
+    .board div {
+        height: 70%;   
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .suggest {
+        width: 45%;
+    }
+    .feed h4 {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .suggest h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 673px) {
+    .hidden {
+        display: none;
+    }
+    .opt {
+        width: 70%;
+        padding-right: 20px;
+    }
+    .feed h4 {
+        font-size: 8px;
+        padding: 2px px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .feed {
+        display: none;
+    }
+    .opt {
+        width: 85%;
+    }
+}@media screen and (max-width: 420px) {
+    .suggest {
+        display: none;
+    }
+    .opt {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
 }
 
